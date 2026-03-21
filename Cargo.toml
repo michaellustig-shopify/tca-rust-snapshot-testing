@@ -1,0 +1,33 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/snapshot-testing",
+    "crates/inline-snapshot-testing",
+    "crates/snapshot-testing-custom-dump",
+    "crates/trinity",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/mlustig/rust-snapshot-testing"
+
+[workspace.dependencies]
+# Core
+similar = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+
+# Testing
+insta = { version = "1", features = ["yaml"] }
+
+# Trinity
+clap = { version = "4", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+
+# Internal workspace deps
+snapshot-testing = { path = "crates/snapshot-testing" }
+inline-snapshot-testing = { path = "crates/inline-snapshot-testing" }
+snapshot-testing-custom-dump = { path = "crates/snapshot-testing-custom-dump" }

@@ -1,0 +1,15 @@
+[package]
+name = "snapshot-testing"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "A Rust port of Point-Free's swift-snapshot-testing — extensible snapshot testing with pluggable diffing strategies"
+
+[dependencies]
+similar = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+insta = { workspace = true }

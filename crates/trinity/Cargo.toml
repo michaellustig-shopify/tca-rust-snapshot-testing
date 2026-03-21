@@ -1,0 +1,17 @@
+[package]
+name = "trinity"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Pre-commit sync enforcement — ensures documentation, tests, and source code stay in sync"
+
+[[bin]]
+name = "trinity"
+path = "src/main.rs"
+
+[dependencies]
+clap = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
