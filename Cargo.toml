@@ -26,6 +26,10 @@ insta = { version = "1", features = ["yaml"] }
 # Trinity
 clap = { version = "4", features = ["derive"] }
 tokio = { version = "1", features = ["full"] }
+syn = { version = "2", features = ["full", "parsing"] }
+proc-macro2 = { version = "1", features = ["span-locations"] }
+walkdir = "2"
+chrono = { version = "0.4", features = ["serde"] }
 
 # Internal workspace deps
 snapshot-testing = { path = "crates/snapshot-testing" }
