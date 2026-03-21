@@ -39,6 +39,7 @@ pub mod config;
 pub mod diff;
 pub mod diffing;
 pub mod snapshotting;
+pub mod strategies;
 
 // Re-export key types at crate root
 pub use assert::{assert_snapshot, verify_snapshot};
@@ -46,3 +47,8 @@ pub use config::{DiffTool, Record, SnapshotTestingConfiguration};
 pub use diff::line_diff;
 pub use diffing::Diffing;
 pub use snapshotting::Snapshotting;
+
+// Re-export strategy modules so users can reference them for documentation,
+// though strategies are accessed as associated functions on Snapshotting
+// (e.g., Snapshotting::lines(), Snapshotting::json()).
+pub use strategies::{data, debug, description, json, lines};

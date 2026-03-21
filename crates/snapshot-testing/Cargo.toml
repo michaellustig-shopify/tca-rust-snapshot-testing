@@ -13,3 +13,23 @@ thiserror = { workspace = true }
 
 [dev-dependencies]
 insta = { workspace = true }
+
+[[example]]
+name = "ex01_basic_diff"
+path = "examples/ex01_basic_diff.rs"
+
+[[example]]
+name = "ex02_custom_strategy"
+path = "examples/ex02_custom_strategy.rs"
+
+[[example]]
+name = "ex03_pullback"
+path = "examples/ex03_pullback.rs"
+
+[[example]]
+name = "ex04_record_modes"
+path = "examples/ex04_record_modes.rs"
+
+[[example]]
+name = "ex05_doc_tests"
+path = "examples/ex05_doc_tests.rs"
